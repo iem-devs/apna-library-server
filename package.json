@@ -1,0 +1,34 @@
+{
+  "name": "apna-library-server",
+  "version": "1.0.0",
+  "description": "Apna Library Backend Server",
+  "main": "app.js",
+  "scripts": {
+    "test": "standard && node_modules/.bin/mocha --timeout 99999"
+  },
+  "author": "IEM DEVS",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4",
+    "standard": "^5.4.1",
+    "supertest": "^1.1.0"
+  },
+  "dependencies": {
+    "async": "^1.5.2",
+    "body-parser": "^1.14.2",
+    "cors": "^2.7.1",
+    "express": "^4.13.3",
+    "lodash": "^4.0.0",
+    "mongoose": "^4.1.8"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "done",
+      "before",
+      "after"
+    ]
+  }
+}
