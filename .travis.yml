@@ -8,5 +8,3 @@ before_script:
 notifications:
   email: false
   slack: iem-devs:9jYiufawErtoIPr84fDgTQ28
-    on_success: change
-    on_error: always
