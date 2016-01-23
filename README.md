@@ -1,4 +1,4 @@
-Apna Library Backend Server [WIP]
+Apna Library Backend Server [WIP]  [![Build Status](https://travis-ci.org/iem-devs/apna-library-server.svg?branch=master)](https://travis-ci.org/iem-devs/apna-library-server)
 ==================================
 
 Backend Server for Apna Library Android App
