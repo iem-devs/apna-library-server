@@ -17,7 +17,7 @@ app.set('port', process.env.PORT || 3000)
 /**
  * Connect to MongoDB
  */
-mongoose.connect('mongodb://localhost:27017/transparency')
+mongoose.connect('mongodb://localhost:27017/apnalibrary')
 mongoose.connection.on('error', function () {
   console.log('Mongoose Error.')
 })
