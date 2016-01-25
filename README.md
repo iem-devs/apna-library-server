@@ -5,13 +5,13 @@ Backend Server for Apna Library Android App
 
 ## Technical Features
 
-* Node 5.4.1
+* Node 0.12.7
 * MongoDB Backend
 * Rest API Based on Express
 
 ## Contributing
 
-Read the [Contributing Guidelines](CONTRIBUTING.md)
+Read the [Contributing Guidelines](CONTRIBUTING.md). Also check out our [Wiki](https://github.com/iem-devs/apna-library-server/wiki) if you are new to Express Server development.
 
 ## LICENSE
 
