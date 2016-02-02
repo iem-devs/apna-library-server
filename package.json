@@ -16,9 +16,12 @@
   },
   "dependencies": {
     "async": "^1.5.2",
+    "bcrypt": "^0.8.5",
+    "bluebird": "^2.10.1",
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "jsonwebtoken": "^5.0.5",
     "lodash": "^4.0.0",
     "mongoose": "^4.1.8"
   },
