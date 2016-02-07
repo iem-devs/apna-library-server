@@ -1,0 +1,18 @@
+{
+  "name": "Apna Library Server API",
+  "version": "0.0.1",
+  "description": "Backend Server for Apna Library",
+  "title": "Apna Library Server API",
+  "url" : "http://localhost:3000/api",
+  "sampleUrl": "http://localhost:3000/api",
+  "header": {
+    "title": "API Docs"
+  },
+  "footer": {
+    "title": "Built by IEM-Devs"
+  },
+  "template": {
+  	"withCompare": true,
+  	"withGenerator": true
+  }
+}

@@ -36,6 +36,7 @@ app.use(cors())
  * Configure Main route
  */
 app.use('/api', api)
+app.use('/docs', express.static(__dirname + '/docs'))
 
 // catch 404 and provide appropriate error message
 app.use(function (req, res) {
