@@ -3,6 +3,24 @@ Apna Library Backend Server [WIP]  [![Build Status](https://travis-ci.org/iem-de
 
 Backend Server for Apna Library Android App
 
+## Install
+
+```
+git clone https://github.com/iem-devs/apna-library-server.git
+cd apna-library-server
+npm install
+```
+
+## Run
+
+```
+npm start
+```
+
+**API** : [http://localhost:3000/api](http://localhost:3000/api)
+
+**API Docs** (built using [Api Docs JS](http://apidocjs.com/)) : [http://localhost:3000/docs](http://localhost:3000/docs)
+
 ## Technical Features
 
 * Node 0.12.7
