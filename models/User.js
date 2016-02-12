@@ -1,5 +1,18 @@
 /**
- * User Model
+ * @apiDefine UserModel
+ * @apiSuccess {String} UserID ID of the User
+ * @apiSuccess {String} name Name of the User
+ * @apiSuccess {String} email Email of the User
+ * @apiSuccess {String} birth_date Birth Date
+ * @apiSuccess {Number} phone Phone number
+ * @apiSuccess {Boolean} verified Mobile verified flag
+ * @apiSuccess {Object} location Location object
+ * @apiSuccess {Number[]} location.coords GPS coordinates [lat, lon]
+ * @apiSuccess {Object} address Address object
+ * @apiSuccess {String} address.residence Residence address
+ * @apiSuccess {String} address.work Work address
+ * @apiSuccess {String} image Image URL
+ * @apiSuccess {String} gcm_id GCM ID
  */
 
 'use strict'

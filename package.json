@@ -4,8 +4,8 @@
   "description": "Apna Library Backend Server",
   "main": "app.js",
   "scripts": {
-    "prestart" : "apidoc -i models/ -i controller/ -o docs/",
-    "start" : "node app.js",
+    "prestart": "apidoc -i models/ -i controller/ -o docs/",
+    "start": "node app.js",
     "test": "standard && node_modules/.bin/mocha --timeout 99999"
   },
   "author": "IEM DEVS",
@@ -23,6 +23,7 @@
     "body-parser": "^1.14.2",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "flat": "^2.0.0",
     "jsonwebtoken": "^5.0.5",
     "lodash": "^4.0.0",
     "mongoose": "^4.1.8",
@@ -35,6 +36,9 @@
       "done",
       "before",
       "after"
+    ],
+    "ignore": [
+      "docs/**/*"
     ]
   }
 }

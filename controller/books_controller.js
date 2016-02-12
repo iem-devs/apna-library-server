@@ -6,7 +6,7 @@
 
 var Book = require('../models/Book')
 var _ = require('lodash')
-var request = require('request')
+// var request = require('request')
 
 /**
  * @api {get} /books Get all books
@@ -42,5 +42,5 @@ exports.getAllBooks = function (req, res) {
 }
 
 exports.getBookByISBN = function (req, res) {
-  var isbn = req.query.isbn
+  // var isbn = req.query.isbn
 }
