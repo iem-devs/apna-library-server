@@ -27,7 +27,8 @@
     "jsonwebtoken": "^5.0.5",
     "lodash": "^4.0.0",
     "mongoose": "^4.1.8",
-    "request": "^2.69.0"
+    "request": "^2.69.0",
+    "xml2js": "^0.4.16"
   },
   "standard": {
     "globals": [
