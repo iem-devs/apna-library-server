@@ -68,7 +68,8 @@ exports.getBookByName = function (req, res) {
   if (query && query !== '') {
     request('https://www.goodreads.com/search/index.xml?key=' + config.goodreads_key + '&q=' + query, function (err, response, body) {
       console.log(response.statusCode)
-      console.log(err)
+      // console.log(err)
+      if (err) console.log(err)
       parseString(body, function (err, result) {
         if (err) console.log(err)
         // console.log(JSON.stringify(result))
@@ -78,7 +79,7 @@ exports.getBookByName = function (req, res) {
           var books = []
           results.forEach(function (res) {
             books.push({
-              id: res.id[0]['_'],
+              id: res['best_book'][0]['id'][0]['_'],
               pub_year: res['original_publication_year'][0]['_'],
               rating: res['average_rating'][0],
               title: res['best_book'][0]['title'][0],
