@@ -99,3 +99,63 @@ exports.getBookByName = function (req, res) {
     })
   }
 }
+
+/**
+ * @api {get} /book/id Get book by ID
+ * @apiVersion 0.0.2
+ * @apiName getBookById
+ * @apiGroup Book
+ * @apiParam {String} id Id of the book
+ *
+ * @apiDescription Get book information by Id
+ *
+ * @apiHeader Authorization JWT token
+ * @apiUse BookModel
+ *
+ * @apiError 401/Unauthorized Only authenticated users can access the data.
+ * @apiError 404/NoBooksFound  No books were found in database
+ */
+exports.getBookById = function (req, res) {
+  var id = req.query.id
+  if (id && id !== '') {
+    request('https://www.goodreads.com/book/show.xml?key=' + config.goodreads_key + '&id=' + id, function (err, response, body) {
+      if (err) console.log(err)
+      parseString(body, function (err, result) {
+        if (err) console.log(err)
+        // console.log(JSON.stringify(result))
+        var bk = result['GoodreadsResponse']['book'][0]
+        var book = {
+          id: id,
+          title: bk['title'][0],
+          isbn: bk['isbn'][0],
+          isbn13: bk['isbn13'][0],
+          image_url: bk['image_url'][0],
+          small_image_url: bk['small_image_url'][0],
+          publication_year: bk['publication_year'][0],
+          publication_month: bk['publication_month'][0],
+          publication_day: bk['publication_day'][0],
+          description: bk['description'][0].replace(/(\r\n|\n|\r)/gm, ''),
+          average_rating: bk['average_rating'][0],
+          num_pages: bk['num_pages'][0],
+          ratings_count: bk['ratings_count'][0],
+          text_reviews_count: bk['text_reviews_count'][0],
+          url: bk['url'][0],
+          authors: bk['authors'][0]['author'].map(function (author) {
+            return {
+              id: author['id'][0],
+              name: author['name'][0],
+              role: author['role'][0],
+              image_url: author['image_url'][0]['_'].replace(/(\r\n|\n|\r)/gm, ''),
+              small_image_url: author['small_image_url'][0]['_'].replace(/(\r\n|\n|\r)/gm, ''),
+              link: author['link'][0],
+              average_rating: author['average_rating'][0],
+              ratings_count: author['ratings_count'][0],
+              text_reviews_count: author['text_reviews_count'][0]
+            }
+          })
+        }
+        res.status(200).json(book)
+      })
+    })
+  }
+}

@@ -60,5 +60,6 @@ router.post('/user/gcm/register', AuthChecker, UserController.registerGcmToken)
 
 router.get('/books', BooksController.getAllBooks)
 router.get('/book/name', BooksController.getBookByName)
+router.get('/book/id', BooksController.getBookById)
 
 module.exports = router
